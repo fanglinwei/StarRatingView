@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StarRatingView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yE2-Ro-sHz" customClass="StarRatingView" customModule="StarRatingView" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="162" width="100" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="EFK-YS-fWm"/>
+                                    <constraint firstAttribute="height" constant="24" id="ioF-cj-jNk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="star_selected"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="normalImage" value="star_normal"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="touchEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="slideEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StoryBoard创建" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMT-aA-6lO">
+                                <rect key="frame" x="127" y="111.5" width="121" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="代码创建" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSL-zb-SZo">
+                                <rect key="frame" x="153" y="283.5" width="69.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sSL-zb-SZo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="2xG-ml-hKR"/>
+                            <constraint firstItem="sSL-zb-SZo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DsJ-wh-Po7"/>
+                            <constraint firstItem="yE2-Ro-sHz" firstAttribute="top" secondItem="KMT-aA-6lO" secondAttribute="bottom" constant="30" id="cZV-Lt-Qf4"/>
+                            <constraint firstItem="KMT-aA-6lO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vgY-ky-BTN"/>
+                            <constraint firstItem="yE2-Ro-sHz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vvk-EB-G8e"/>
+                            <constraint firstItem="yE2-Ro-sHz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="142" id="xas-en-iXm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="starView1" destination="yE2-Ro-sHz" id="zCR-Ka-K61"/>
+                        <outlet property="widthConstraint" destination="EFK-YS-fWm" id="xZ1-zI-SUy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154.40000000000001" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star_normal" width="24" height="24"/>
+        <image name="star_selected" width="24" height="24"/>
+    </resources>
+</document>
